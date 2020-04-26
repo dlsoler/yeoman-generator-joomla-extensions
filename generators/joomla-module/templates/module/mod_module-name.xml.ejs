@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_<%= moduleName %></name>
+	<author><%= authorName %></author>
+	<creationDate><%= moduleBuildDate %></creationDate>
+	<copyright><%= copyright %></copyright>
+	<license><%= license %></license>
+	<authorEmail><%= authorEmail %></authorEmail>
+	<authorUrl><%= authorURL %></authorUrl>
+	<version><%= moduleVersion %></version>
+	<description><%= languagePrefix %>_DESCRIPTION</description>
+
+	<customContent />
+
+	<files>
+		<filename module="mod_<%= moduleName %>">mod_<%= moduleName %>.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_<%= moduleName %>.ini</language>
+		<language tag="en-GB">en-GB.mod_<%= moduleName %>.sys.ini</language>
+	</languages>
+
+	<media destination="mod_<%= moduleName %>" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="prepare_content"
+					type="radio"
+					label="<%= languagePrefix %>_FIELD_PREPARE_CONTENT_LABEL"
+					description="<%= languagePrefix %>_FIELD_PREPARE_CONTENT_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="backgroundimage"
+					type="media"
+					label="<%= languagePrefix %>_FIELD_BACKGROUNDIMAGE_LABEL"
+					description="MOD_BACKGROUNDIMAGE_FIELD_LOGO_DESC"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+					>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

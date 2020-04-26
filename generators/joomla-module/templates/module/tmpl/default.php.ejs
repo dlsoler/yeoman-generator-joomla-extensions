@@ -1,0 +1,20 @@
+<?php
+/**
+ * @package     <%= namespace %>
+ * @subpackage  mod_<%= moduleName %>
+ *
+ * @copyright   <%= copyright %>
+ * @license     <%= license %>
+ */
+
+defined('_JEXEC') or die;
+
+JHtml::stylesheet('mod_<%= moduleName %>/styles.css', array(), true);
+JHtml::script('mod_<%= moduleName %>/script.js', false, true);
+
+?>
+
+
+<div class="<%= moduleName %><?php echo $moduleclass_sfx; ?>" <?php if ($params->get('backgroundimage')) : ?> style="background-image:url(<?php echo $params->get('backgroundimage'); ?>)"<?php endif; ?> >
+	<?php echo $module->content; ?>
+</div>
