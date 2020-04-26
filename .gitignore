@@ -2,4 +2,10 @@ node_modules/
 bower_components/
 *.log
 
+generators/app/*.js
+generators/app/*.map
+generators/joomla-module/*.js
+generators/joomla-module/*.map
+generators/k2-plugin/*.js
+generators/k2-plugin/*.map
 
