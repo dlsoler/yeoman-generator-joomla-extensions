@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="k2" method="upgrade">
+	<name><%= pluginName %></name>
+	<author><%= authorName %></author>
+	<creationDate><%= pluginBuildDate %></creationDate>
+	<copyright><%= copyright %></copyright>
+	<authorEmail><%= authorEmail %></authorEmail>
+	<authorUrl><%= authorURL %></authorUrl>
+	<version><%= pluginVersion %></version>
+	<license><%= license %></license>
+	<description><%= pluginDescription %></description>
+	<files>
+		<filename plugin="<%= pluginName %>"><%= pluginName %>.php</filename>
+	</files>
+	<!-- Language files -->
+	<languages>
+		<language tag="en-GB">en-GB.plg_<%= pluginName %>.ini</language>
+		<language tag="en-GB">en-GB.plg_<%= pluginName %>.sys.ini</language>
+		<language tag="es-ES">es-ES.plg_<%= pluginName %>.ini</language>
+		<language tag="es-ES">es-ES.plg_<%= pluginName %>.sys.ini</language>
+	</languages>
+	<!-- Standard Joomla! plugin parameters to setup the K2 plugin once -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="width" type="text" default="425" label="<%= languagePrefix %>_VIDEO_WIDTH" description="<%= languagePrefix %>_VIDEO_WIDTH_DESC" />
+				<field name="height" type="text" default="344" label="<%= languagePrefix %>_VIDEO_HEIGHT" description="<%= languagePrefix %>_VIDEO_HEIGHT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<!-- K2 plugin parameters which extend K2 backend forms are defined here -->
+	<fields group="item-video">
+		<field name="videoURL_item" type="text" size="80" default="" label="<%= languagePrefix %>_YOUTUBE_URL_FOR_ITEM_FORMS" description="" />
+	</fields>
+	<fields group="category">
+		<field name="videoURL_cat" type="text" size="80" default="" label="<%= languagePrefix %>_YOUTUBE_URL_FOR_CATEGORY_FORMS" description="" />
+	</fields>
+	<fields group="user">
+		<field name="videoURL_user" type="text" size="80" default="" label="<%= languagePrefix %>_YOUTUBE_URL_FOR_USER_FORMS" description="" />
+	</fields>
+</extension>
