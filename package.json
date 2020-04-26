@@ -1,0 +1,37 @@
+{
+  "name": "generator-joomla-extensions",
+  "version": "0.1.0",
+  "description": "Yeoman generator that scaffolds out a Joomla extensions",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "Joomla",
+    "extension",
+    "component",
+    "module",
+    "k2 plugin",
+    "FOF3"
+  ],
+  "author": "Diego Soler",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@types/date-fns": "^2.6.0",
+    "@types/lodash": "^4.14.149",
+    "@types/recursive-readdir": "^2.2.0",
+    "date-fns": "^2.12.0",
+    "lodash": "^4.17.15",
+    "recursive-readdir": "^2.2.2",
+    "yeoman-generator": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/yeoman-generator": "^3.1.4",
+    "eslint": "^6.8.0",
+    "typescript": "^3.8.3"
+  }
+}

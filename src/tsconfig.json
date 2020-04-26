@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "../generators"
+  },
+  "files": [ 
+    "./app/index.ts",
+    "./joomla-module/index.ts",
+    "./k2-plugin/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "generators/app/templates/**/*",
+  ],
+  "lib": ["ES2015"]
+}
