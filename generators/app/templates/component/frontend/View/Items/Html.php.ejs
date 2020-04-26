@@ -1,0 +1,22 @@
+<?php
+
+/*
+ * Html.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * <%= copyright %>
+ */
+
+namespace <%= namespace %>\Site\View\Items;
+
+defined('_JEXEC') or die;
+
+use JFactory;
+use JUserHelper;
+
+class Html extends \FOF30\View\DataView\Html {
+    public function __construct(\FOF30\Container\Container $container, array $config = array()) {
+        $this->setFrontendPageTitle = true;
+        parent::__construct($container, $config);
+    }
+}

@@ -1,0 +1,25 @@
+<?php
+/*
+ * default.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * <%= copyright %>
+ */
+
+defined('_JEXEC') or die;
+
+JHtml::stylesheet('com_<%= componentName %>/item.css', array(), true);
+JHtml::script('com_<%= componentName %>/item.js', false, true);
+
+?>
+
+<div id="item-view-container">
+    <div id="item">
+        <h1 id="item-page-title">Item View Example</h1>
+        <h3 id="item-title"><?php echo $this->item->title ?></h3>
+        <div id="item-description">
+            <?php echo $this->item->description; ?>
+        </div>
+        <p id="item-due"><?php echo $this->item->due ?></p>
+    </div>
+</div>

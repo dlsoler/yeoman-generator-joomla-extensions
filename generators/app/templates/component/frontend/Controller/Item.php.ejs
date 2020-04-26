@@ -1,0 +1,24 @@
+<?php
+
+/* 
+ * Item.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * <%= copyright %>
+ */
+namespace <%= namespace %>\Site\Controller;
+defined('_JEXEC') or die;
+
+class Item extends \FOF30\Controller\DataController {
+    
+    protected function onBeforeExecute($task) {
+        if($task === 'read' || $task === 'browse'){
+            return TRUE;
+        }
+        return FALSE;
+    }
+    
+    protected function onBeforeRead() {
+        return true;
+    }
+}

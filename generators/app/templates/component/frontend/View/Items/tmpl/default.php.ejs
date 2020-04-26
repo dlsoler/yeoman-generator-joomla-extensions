@@ -1,0 +1,32 @@
+<?php
+/*
+ * default.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * <%= copyright %>
+ */
+
+
+defined('_JEXEC') or die;
+
+JHtml::stylesheet('com_<%= componentName %>/items.css', array(), true);
+JHtml::script('com_<%= componentName %>/items.js', false, true);
+?>
+
+<div>
+  <h1><%= componentName %></h1>
+  <h3>Items View Example</h3>
+  <ol>
+    <?php foreach ($this->items as $item) : ?>
+    <li>
+      <a class="item-title-link" href="index.php?option=com_<%= componentName %>&view=Item&id=<?php echo $item-><%= componentName %>_item_id ?>">
+        <span><?php echo $item->title; ?></span>
+      </a>
+      <div class="item-description"><?php echo $item->description; ?></div>
+      <p class="item-due"><span><?php echo $item->due; ?></span></p>
+      </ul>
+      <hr />
+    </li>
+    <?php endforeach; ?>
+  </ol>
+</div>

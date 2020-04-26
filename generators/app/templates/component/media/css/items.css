@@ -1,0 +1,18 @@
+/*
+ * Item.css
+ * Author: <%= authorName %>
+ * <%= copyright %>
+ */
+
+.item-title {
+  color: darkblue;
+}
+
+.item-description {
+  color: rgba(0,0,0,0.65);
+}
+
+.item-due {
+  color: rgba(80,0,0,0.95);
+  font-size: 95%;
+}

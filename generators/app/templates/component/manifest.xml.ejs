@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="component" method="upgrade">
+	<name><%= componentName %></name>
+	<creationDate><%= componentBuildDate %></creationDate>
+	<author><%= authorName %></author>
+	<authorEmail><%= authorEmail %></authorEmail>
+	<authorUrl><%= authorURL %></authorUrl>
+	<copyright><%= copyright %></copyright>
+	<license><%= license %></license>
+	<version><%= componentVersion %></version>
+	<description><%= componentDescription %></description>
+
+	<!-- Public front end files -->
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename><%= componentName %>.php</filename>
+		<folder>Controller</folder>
+		<folder>Dispatcher</folder>
+		<folder>elements</folder>
+		<folder>Helper</folder>
+		<folder>language</folder>
+		<folder>Model</folder>
+		<folder>Toolbar</folder>
+		<!-- Not a typo. We need BOTH views and View folders, for different reasons. -->
+		<folder>View</folder>
+		<folder>views</folder>
+	</files>
+
+	<!-- Front end translation files -->
+	<!--
+	<languages folder="language/frontend">
+		<language tag="en-GB">en-GB/en-GB.com_<%= componentName %>.ini</language>
+	</languages>
+	-->
+	
+	<!-- SQL query files to execute on installation -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysql">sql/install/mysql/install.sql</file>
+			
+			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysqli">sql/install/mysql/install.sql</file>
+			
+		</sql>
+	</install>
+
+	<!-- SQL query files to execute on uninstallation -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysql">sql/install/mysql/uninstall.sql</file>
+
+			<file driver="mysqli" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysqli">sql/install/mysql/uninstall.sql</file>
+
+		</sql>
+	</uninstall>
+	
+	<!-- SQL files to run on update -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+			<schemapath type="mysqli">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<!-- Media files -->
+	<media destination="com_<%= componentName %>" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</media>
+
+	<!-- Administrator back-end section -->
+	<administration>
+		<!-- Administration menu -->
+		<menu view="ControlPanel" img="../media/com_<%= componentName %>/images/icon-16.png"><%= languagePrefix %></menu>
+
+		<!-- Back-end files -->
+		<files folder="backend">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<filename><%= componentName %>.php</filename>
+			<filename>fof.xml</filename>
+
+			<folder>assets</folder>
+			<folder>Controller</folder>
+			<folder>CustomField</folder>
+			<folder>Dispatcher</folder>
+			<folder>Form</folder>
+			<folder>Helper</folder>
+			<folder>language</folder>
+			<folder>Model</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>Toolbar</folder>
+			<folder>View</folder>
+		</files>
+
+		<!-- Back-end translation files -->
+		<!--
+		<languages folder="language/backend">
+			<language tag="en-GB">en-GB/en-GB.com_<%= componentName %>.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_<%= componentName %>.sys.ini</language>
+		</languages>
+		-->
+	</administration>
+
+</extension>

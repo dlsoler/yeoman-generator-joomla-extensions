@@ -1,0 +1,25 @@
+<?php
+
+/* 
+ * Dispatcher.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * Copyright <%= copyright %>
+ * @license <%= license %>
+ */
+
+namespace <%= namespace %>\Admin\Dispatcher;
+
+defined('_JEXEC') or die;
+
+use FOF30\Container\Container;
+
+class Dispatcher extends \FOF30\Dispatcher\Dispatcher
+{
+	/** @var   string  The name of the default view, in case none is specified */
+	public $defaultView = 'ControlPanel';
+
+	public function onBeforeDispatch()
+	{
+	}
+}

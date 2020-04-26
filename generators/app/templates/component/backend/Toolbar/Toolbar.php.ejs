@@ -1,0 +1,28 @@
+<?php
+
+/* 
+ * toolbar.php
+ * @package  <%= componentName %>
+ * @author <%= authorName %>
+ * Copyright <%= copyright %>
+ */
+
+namespace <%= namespace %>\Admin\Toolbar;
+
+use FOF30\Inflector\Inflector;
+use JToolBarHelper;
+use JText;
+
+defined('_JEXEC') or die;
+
+class Toolbar extends \FOF30\Toolbar\Toolbar {
+
+    public function onControlPanels() {
+
+        $option = $this->container->componentName;
+
+        JToolBarHelper::title(JText::_(strtoupper($option)), str_replace('com_', '', $option));
+        JToolBarHelper::preferences($option);
+    }
+
+}
