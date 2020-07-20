@@ -24,7 +24,7 @@
     "@types/lodash": "^4.14.149",
     "@types/recursive-readdir": "^2.2.0",
     "date-fns": "^2.12.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "recursive-readdir": "^2.2.2",
     "yeoman-generator": "^4.8.2"
   },
